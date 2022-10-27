@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect("https://github.com/Rehaan-345/Project_1_Career_Guidance/blob/main/src/db").then(() => {
+mongoose.connect("mongodb+srv://career_guidance:1357924680@career-guidance.abqbvqk.mongodb.net/project_1?retryWrites=true&w=majority").then(() => {
     console.log("connection successful");
 }).catch((e) => {
     console.log('no connection'+e);
