@@ -336,8 +336,9 @@ app.get("/iti_electronics_mechanic", user_auth, async (req, res) => {
 
 
 // I I I T
-app.get("/iiit", user_auth, (req, res) => {
-    res.render('courses/iiit')
+app.get("/iiit", user_auth, async (req, res) => {
+    let course = await Course.find({ course: "iiit" }).sort({ rating: -1 })
+    res.render('courses/iiit', { data: course, everything: everything })
 })
 
 
